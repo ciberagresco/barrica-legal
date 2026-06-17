@@ -29,7 +29,7 @@ A fonte da verdade é o repositório do aplicativo (`src/legal/privacyPolicy.js`
 
 ## Versão atual dos documentos
 
-- Política de Privacidade: 1.0 — 20 de março de 2026
+- Política de Privacidade: 1.2 — 17 de junho de 2026
 - Termos de Uso: 1.0 — 20 de março de 2026
 
 ## Contato
