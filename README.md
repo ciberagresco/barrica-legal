@@ -17,11 +17,13 @@ Mantém o código do app privado e expõe publicamente apenas o que precisa ser 
 
 Sem JS, sem build step, sem dependências externas. HTML estático puro.
 
-## URLs públicas (após ativar GitHub Pages)
+## URLs públicas
 
-- `https://ciberagresco.github.io/barrica-legal/`
-- `https://ciberagresco.github.io/barrica-legal/privacy.html`
-- `https://ciberagresco.github.io/barrica-legal/terms.html`
+- `https://legal.barrica.app/`
+- `https://legal.barrica.app/privacy.html`
+- `https://legal.barrica.app/terms.html`
+
+O endereço antigo (`https://ciberagresco.github.io/barrica-legal/`) continua no ar e funcionando, mas o domínio próprio é o canônico a partir de agora.
 
 ## Como atualizar
 
@@ -29,7 +31,7 @@ A fonte da verdade é o repositório do aplicativo (`src/legal/privacyPolicy.js`
 
 ## Versão atual dos documentos
 
-- Política de Privacidade: 1.2 — 17 de junho de 2026
+- Política de Privacidade: 1.3 — 17 de julho de 2026
 - Termos de Uso: 1.0 — 20 de março de 2026
 
 ## Contato
