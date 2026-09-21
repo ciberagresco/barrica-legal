@@ -21,7 +21,7 @@
 
   <main>
     <h1>Política de Privacidade</h1>
-    <div class="meta">Versão 1.3 — atualizada em 17 de julho de 2026</div>
+    <div class="meta">Versão 2.0 · atualizada em 20 de setembro de 2026</div>
 
     <nav class="toc" aria-label="Índice da Política de Privacidade">
       <strong>Índice</strong>
@@ -58,13 +58,15 @@ Encarregado (DPO): Não designado formalmente. O Barrica se enquadra como agente
 
     <h2 id="s3">3. Quais Dados Pessoais Coletamos</h2>
     <p>3.1. No cadastro
-Nome completo, username (apelido público), endereço de e-mail e senha (criptografada pelo Supabase Auth, nunca armazenada em texto puro). Futuramente, data de nascimento para verificação de maioridade conforme ECA Digital.
+Nome completo, username (apelido público), endereço de e-mail, senha (criptografada pelo Supabase Auth, nunca armazenada em texto puro) e data de nascimento. A data de nascimento é usada para verificar a maioridade antes de liberar o acesso ao conteúdo, conforme o ECA Digital e a Lei nº 9.294/1996, que restringe a publicidade de bebidas alcoólicas a maiores de 18 anos.
 
 3.2. No perfil (opcionais)
-Foto de perfil, bio/descrição pessoal e cidade. Esses dados são fornecidos voluntariamente e podem ser removidos a qualquer momento.
+Foto de perfil, bio/descrição pessoal, cidade, perfil do Instagram e categoria de perfil (como você se apresenta no universo da cachaça: Apreciador, Bartender, Sommelier de cachaça, Chef, Bar/Restaurante, Cachaçaria ou Instituição). Esses dados são fornecidos voluntariamente e podem ser alterados ou removidos a qualquer momento em Configurações.
 
 3.3. No uso do aplicativo
-Registros de degustação (rótulo, nota, descritores sensoriais, tipo de madeira); fotos de rótulos e momentos de consumo; localização (apenas quando informada voluntariamente pelo usuário); humor e clima no momento da degustação (emojis selecionados); interações sociais (curtidas, comentários, seguidores, confrarias, listas); data e hora de cada ação.
+Registros de degustação (rótulo, nota, descritores sensoriais, tipo de madeira, harmonização); fotos de rótulos e de momentos de consumo; nome do local informado; humor e clima no momento da degustação (emojis selecionados); interações sociais (curtidas, comentários, seguidores, menções, confrarias, listas); receitas que você cria, com capa e vídeo quando houver; sugestões ao catálogo (produtos, produtores, madeiras, ingredientes); estabelecimentos que você cadastra; denúncias e bloqueios que você registra; troféus conquistados; e data e hora de cada ação.
+
+Localização: quando você autoriza o acesso no seu aparelho, o Barrica lê a posição do GPS no momento em que você salva uma degustação e a grava junto com ela. A coordenada é arredondada antes de ser gravada (precisão de aproximadamente 5 km), de modo que indica a região, não o endereço. Você pode negar ou revogar essa permissão nas configurações do seu sistema operacional a qualquer momento, e as degustações continuam funcionando sem ela.
 
 3.4. Dados técnicos e de segurança
 Logs mínimos de acesso (endereço IP, data/hora, identificação do dispositivo, eventos críticos de segurança) e registros de aceite e consentimento (versão dos documentos, timestamps, IP).
@@ -73,10 +75,29 @@ Logs mínimos de acesso (endereço IP, data/hora, identificação do dispositivo
 O Barrica utiliza localStorage/AsyncStorage do navegador ou do dispositivo para manter a sessão do usuário e preferências locais.
 
 3.6. Analytics de produto
-O Barrica utiliza o PostHog (operador) para análise de uso do aplicativo (eventos como abertura de tela, criação de conta, ações em check-in, harmonização e interações sociais). O PostHog gera um identificador anônimo por instalação para correlacionar eventos da mesma sessão. Não utilizamos cookies de publicidade direcionada nem fazemos profiling para venda de dados.
+O Barrica utiliza o PostHog (operador) para análise de uso do aplicativo (eventos como abertura de tela, criação de conta, ações em check-in, harmonização e interações sociais). Depois que você entra na sua conta, esses eventos passam a ser associados ao seu identificador de usuário e ao seu username, e não a um identificador anônimo: é possível, para nós, saber quais ações vieram de qual conta. Não enviamos ao PostHog o conteúdo das suas degustações, fotos ou comentários, apenas metadados de uso, e não utilizamos cookies de publicidade direcionada nem fazemos profiling para venda de dados.
+
+Também registramos mensagens de erro do aplicativo para diagnóstico.
 
 3.7. Analytics do site institucional e lista de espera
-O site de divulgação do Barrica (barricaapp.github.io) utiliza o PostHog em modo sem cookies e sem armazenamento no seu dispositivo (persistência apenas em memória) para medir visitas de forma anônima e identificar de qual canal de divulgação o visitante veio (parâmetros UTM presentes na URL). Ao entrar na lista de espera, essa origem de campanha pode ser registrada junto ao seu e-mail, exclusivamente para avaliarmos quais canais de divulgação funcionam. Nenhum outro dado pessoal é coletado durante a navegação no site.</p>
+O site de divulgação do Barrica (barrica.app) utiliza o PostHog em modo sem cookies e sem armazenamento no seu dispositivo (persistência apenas em memória) para medir visitas de forma anônima e identificar de qual canal de divulgação o visitante veio (parâmetros UTM presentes na URL). Nenhum outro dado pessoal é coletado durante a navegação no site. O site já teve uma lista de espera, encerrada quando o aplicativo chegou às lojas; os e-mails informados nela, quando ainda existia, foram registrados junto da origem de campanha e são tratados apenas para comunicação sobre o Barrica.
+
+3.8. Login com Google e Apple
+Se você optar por entrar com Google ou com Apple, o provedor nos envia, além do seu nome e endereço de e-mail, um conjunto de campos técnicos que acompanham a autenticação: um identificador da sua conta naquele provedor, a indicação de que o e-mail foi verificado, a origem do token e, no caso do Google, o endereço da sua foto de perfil. O Barrica não exibe nem utiliza essa foto, mas ela é recebida e fica registrada junto ao seu cadastro de autenticação. Não recebemos sua senha nem seus contatos, e não solicitamos permissão para isso.
+
+O prefixo do seu e-mail é usado para gerar um nome de usuário provisório, que você substitui na tela seguinte. Se você usar o recurso da Apple de ocultar o e-mail, receberemos o endereço de encaminhamento privado gerado por ela, e é esse endereço que ficará registrado.
+
+Os provedores não nos informam sua data de nascimento nem registram seu aceite dos nossos documentos. Por isso, mesmo entrando por Google ou Apple, pedimos essas informações em uma tela de conclusão de cadastro antes de liberar o acesso: sem elas a conta permanece pendente e não navega no aplicativo.
+
+3.9. Leitura automática de rótulos (scan)
+Quando você fotografa um rótulo para que o Barrica o identifique, a fotografia é enviada a um modelo de inteligência artificial operado pela Anthropic, nos Estados Unidos, que devolve o texto lido. É uma transferência internacional de dados, tratada na seção 9.
+
+A fotografia enviada é também armazenada por nós, em área privada, associada à sua conta, junto com o resultado da leitura e com registros de uso do recurso (quantidade de leituras por dia, sucesso ou falha e tempo de resposta). Esses registros existem para apurar erros de leitura, calibrar o casamento com o catálogo, medir a qualidade do recurso e aplicar limites de uso. Não usamos essas fotografias para treinar modelos de inteligência artificial, nossos ou de terceiros.
+
+Fotografe apenas o rótulo. Evite enquadrar pessoas, documentos ou qualquer coisa que você não queira enviar a um serviço de terceiro.
+
+3.10. Reivindicação de produtor
+Se você reivindicar a página de um produtor, coletamos os dados que você informa para comprovar o vínculo: CNPJ, e-mail de contato, perfil do Instagram oficial, uma mensagem livre e um documento comprobatório, que fica em área privada de armazenamento. Esses dados são usados exclusivamente para analisar a reivindicação.</p>
 
     <h2 id="s4">4. Para Que Utilizamos Seus Dados</h2>
     <p>(i) Prestação do Serviço: criação e manutenção de conta, autenticação, publicação de degustações, exibição no feed social e rankings.
@@ -96,17 +117,23 @@ O Barrica não vende dados pessoais a terceiros e não realiza publicidade direc
     <h2 id="s5">5. Bases Legais do Tratamento (LGPD)</h2>
     <p>A LGPD prevê múltiplas bases legais para o tratamento de dados pessoais (Art. 7º). O Barrica utiliza as seguintes bases:
 
-• Nome, e-mail, senha — Execução contratual (Art. 7º, V) — Conta, login, suporte
-• Username — Execução contratual (Art. 7º, V) — Identificação social, autoria
-• Data de nascimento — Obrigação legal (Art. 7º, II) — Verificação de maioridade
-• Foto, bio, cidade — Consentimento (Art. 7º, I) — Personalização, contexto social
-• Degustações — Execução contratual (Art. 7º, V) — Funcionalidade central, rankings
-• Humor/emojis — Execução contratual (Art. 7º, V) — Contexto da degustação
-• Localização voluntária — Consentimento específico (Art. 7º, I) — Descoberta local
-• Interações sociais — Execução contratual (Art. 7º, V) — Feed, notificações
-• Fotos — Execução contratual (Art. 7º, V) — Funcionalidade central
-• Logs de acesso — Legítimo interesse (Art. 7º, IX) + obrigação legal (MCI) — Segurança
-• Registro de aceite — Legítimo interesse + dever de registro (Art. 37) — Comprovação
+• Nome, e-mail, senha · Execução contratual (Art. 7º, V) · Conta, login, suporte
+• Username · Execução contratual (Art. 7º, V) · Identificação social, autoria
+• Data de nascimento · Obrigação legal (Art. 7º, II) · Verificação de maioridade
+• Foto, bio, cidade, Instagram, categoria de perfil · Consentimento (Art. 7º, I) · Personalização e contexto social
+• Degustações · Execução contratual (Art. 7º, V) · Funcionalidade central, rankings
+• Humor/emojis · Execução contratual (Art. 7º, V) · Contexto da degustação
+• Localização aproximada da degustação, lida do GPS mediante permissão do sistema operacional e arredondada antes de gravar · Consentimento específico (Art. 7º, I) · Descoberta local
+• Interações sociais · Execução contratual (Art. 7º, V) · Feed, notificações
+• Fotos de degustação e de perfil · Execução contratual (Art. 7º, V) · Funcionalidade central
+• Fotografia enviada ao scan de rótulo, inclusive seu envio à Anthropic · Execução contratual (Art. 7º, V) · Leitura automática do rótulo que você pediu
+• CNPJ, e-mail de contato e documento comprobatório na reivindicação de produtor · Execução contratual e exercício regular de direitos (Art. 7º, V e VI) · Comprovar o vínculo alegado
+• Dados recebidos do Google e da Apple ao entrar com esses provedores · Execução contratual (Art. 7º, V) · Autenticar o acesso que você solicitou
+• Receitas, sugestões ao catálogo, estabelecimentos e demais conteúdos que você cria · Execução contratual (Art. 7º, V) · Funcionalidade central
+• Denúncias e bloqueios · Exercício regular de direitos e cumprimento de obrigação de moderação (Art. 7º, II e VI) · Segurança da comunidade
+• Fotografias do scan mantidas após o encerramento da conta · Legítimo interesse (Art. 7º, IX) · Melhoria contínua do reconhecimento automático de rótulos, sem uso para publicidade e sem treinamento de modelos de inteligência artificial
+• Logs de acesso · Legítimo interesse (Art. 7º, IX) + obrigação legal (MCI) · Segurança
+• Registro de aceite · Legítimo interesse + dever de registro (Art. 37) · Comprovação
 
 5.1. Registros de degustação de cachaça não se enquadram no rol taxativo de dados sensíveis do Art. 5º, II, da LGPD. Contudo, padrões de consumo podem permitir inferências sobre saúde. Por isso, o Barrica compromete-se a: (i) não compartilhar padrões individuais de consumo com terceiros para perfilamento comercial; (ii) não cruzar dados de consumo com dados de saúde; (iii) não realizar profiling de saúde mental com base em registros de humor/emojis.</p>
 
@@ -118,39 +145,46 @@ A responsabilidade primária é do usuário que publicou o conteúdo, que deve g
     <h2 id="s7">7. Armazenamento Local e Tecnologias</h2>
     <p>O Barrica utiliza localStorage (ou AsyncStorage em ambiente nativo) para armazenar dados de sessão, preferências de interface e tokens de autenticação. Essas tecnologias são estritamente necessárias para o funcionamento do Serviço.
 
-Para analytics de produto, utilizamos o PostHog (ver Cláusula 8). O PostHog gera um identificador anônimo de dispositivo/sessão e registra eventos de uso (telas visualizadas, ações realizadas) para entendermos o comportamento agregado dos usuários. Não utilizamos cookies de publicidade direcionada, nem realizamos rastreamento entre aplicativos de terceiros.</p>
+Para analytics de produto, utilizamos o PostHog (ver Cláusula 8), que mantém dados no armazenamento local do seu dispositivo e registra eventos de uso (telas visualizadas, ações realizadas). Antes de você entrar na conta, esses eventos ficam associados apenas ao dispositivo; depois do login, passam a ser associados ao seu identificador de usuário, como descrito na seção 3.6. Não utilizamos cookies de publicidade direcionada, nem realizamos rastreamento entre aplicativos de terceiros.</p>
 
     <h2 id="s8">8. Compartilhamento com Terceiros</h2>
     <p>O Barrica compartilha dados pessoais exclusivamente com os seguintes operadores, na medida estritamente necessária para a prestação do Serviço:
 
 • Supabase (Operador) — Banco de dados, autenticação, armazenamento de arquivos — Região West US (Oregon, Estados Unidos)
 • PostHog (Operador) — Analytics de produto (eventos de uso, métricas de funcionalidade) — Servidores nos Estados Unidos (US Cloud)
-• GitHub Pages (Operador) — Hospedagem dos documentos legais públicos (Política de Privacidade e Termos de Uso) — CDN global
+• Anthropic (Operador) · Leitura automática de rótulos: recebe a fotografia que você envia no scan (seção 3.9) · Estados Unidos
+• Resend (Operador) · Envio dos e-mails de alerta interno gerados por denúncias e por reivindicações de produtor · Estados Unidos
+• GitHub Pages (Operador) · Hospedagem do site institucional e dos documentos legais públicos · CDN global
+• Google Fonts (Operador) · Fornece as fontes tipográficas usadas no aplicativo e no site. A cada carregamento, o seu endereço IP e as informações do navegador ou aparelho chegam ao Google, que é quem entrega os arquivos · CDN global
 
-Não há outros terceiros recebendo dados pessoais no momento. Não vendemos dados pessoais e não compartilhamos com parceiros de marketing ou publicidade.</p>
+Não vendemos dados pessoais e não compartilhamos com parceiros de marketing ou publicidade.</p>
 
     <h2 id="s9">9. Transferência Internacional de Dados</h2>
     <p>O banco de dados principal do Barrica é hospedado pelo Supabase na região West US (Oregon), em servidores da AWS localizados nos Estados Unidos. Dessa forma, os dados de conta, perfil, degustações e fotos são objeto de transferência internacional.
 
-Os eventos de analytics enviados ao PostHog também transitam para servidores nos Estados Unidos (US Cloud do PostHog). Esses eventos não contêm conteúdo de degustações, fotos ou comentários, apenas metadados de uso (telas visitadas, ações realizadas, identificador anônimo de dispositivo/sessão).
+As fotografias enviadas no scan de rótulo (seção 3.9) são transmitidas à Anthropic, nos Estados Unidos, para leitura automática. É a transferência internacional de maior sensibilidade descrita nesta Política, porque o que trafega é uma imagem produzida por você, e não apenas um metadado.
 
-Para todas essas transferências internacionais, adotamos as salvaguardas previstas no Art. 33 da LGPD, incluindo Data Processing Agreement (DPA) com o Supabase e com o PostHog. A hospedagem dos documentos legais públicos via GitHub Pages opera com CDN global e pode envolver tráfego internacional limitado a metadados de requisição (IP, user-agent), com salvaguardas equivalentes.</p>
+Os eventos de analytics enviados ao PostHog também transitam para servidores nos Estados Unidos (US Cloud do PostHog). Esses eventos não contêm conteúdo de degustações, fotos ou comentários, apenas metadados de uso (telas visitadas, ações realizadas) associados ao seu identificador de usuário depois que você entra na conta.
+
+Para todas essas transferências internacionais, adotamos as salvaguardas previstas no Art. 33 da LGPD. Mantemos Data Processing Agreement (DPA) com o Supabase e com o PostHog, e as transferências à Anthropic e ao Resend se dão sob os termos contratuais desses fornecedores, que restringem o uso dos dados à prestação do serviço contratado. A hospedagem dos documentos legais públicos via GitHub Pages opera com CDN global e pode envolver tráfego internacional limitado a metadados de requisição (IP, user-agent), com salvaguardas equivalentes.</p>
 
     <h2 id="s10">10. Retenção e Exclusão de Dados</h2>
-    <p>• Dados de conta e perfil — Enquanto conta ativa. Excluídos após solicitação, com expurgo técnico de backups em 30–90 dias.
-• Fotos — Removidas do Supabase Storage ao excluir conta ou conteúdo.
-• Degustações — Excluídas com a conta OU mantidas apenas como dados anonimizados (conforme escolha do usuário).
-• Logs de acesso — Mínimo 6 meses (ref. Art. 15, MCI).
-• Registros de aceite — Até o fim dos prazos prescricionais (5 anos CDC / 3 anos CC).</p>
+    <p>• Dados de conta e perfil: enquanto a conta estiver ativa. Excluídos após solicitação, com expurgo técnico de backups em 30 a 90 dias.
+• Degustações: ao excluir a conta, os registros são desvinculados do seu perfil e mantidos sem identificação (ver seção 11).
+• Fotos de degustação e de perfil: removidas quando você exclui o conteúdo correspondente.
+• Fotografias enviadas ao scan de rótulo: mantidas após a exclusão da conta, por decisão de projeto, para continuar apurando erros de leitura e melhorando o reconhecimento de rótulos. O registro que as ligava a você no banco de dados é apagado junto com a conta. Hoje o arquivo ainda fica guardado sob o identificador interno da conta encerrada, e estamos trabalhando para remover também essa referência; enquanto isso, se você preferir que a sua seja apagada, basta pedir pelo canal de privacidade.
+• Documentos de reivindicação de produtor: apagados automaticamente. O registro da reivindicação é excluído junto com a sua conta, e o documento é removido do armazenamento por rotina de limpeza que varre arquivos sem registro associado.
+• Logs de acesso: mínimo de 6 meses (Art. 15 do Marco Civil da Internet).
+• Registros de aceite: até o fim dos prazos prescricionais (5 anos no CDC, 3 anos no Código Civil).</p>
 
     <h2 id="s11">11. Dados Anonimizados Após Exclusão de Conta</h2>
     <p>O Barrica poderá manter registros de degustação em formato anonimizado e agregado após a exclusão da conta, para preservação de rankings e melhoria contínua do Serviço.
 
-Ao excluir sua conta, você poderá escolher:
-(a) Exclusão integral de todas as degustações e conteúdos; ou
-(b) Manutenção exclusivamente em formato anonimizado e agregado, sem qualquer vínculo com seu perfil.
+Hoje, a exclusão de conta desvincula automaticamente as degustações do seu perfil: elas deixam de ter qualquer ligação com você, com seu nome ou com seu username, e permanecem apenas como registro sem identificação. Não há, neste momento, opção de apagá-las integralmente pelo aplicativo.
 
-A anonimização será realizada de forma irreversível por meios técnicos razoáveis (Art. 12, LGPD).</p>
+Se você quiser a exclusão integral do conteúdo, e não apenas a desvinculação, solicite pelo canal de privacidade e faremos o procedimento.
+
+A desvinculação é realizada por meios técnicos razoáveis e é irreversível (Art. 12, LGPD).</p>
 
     <h2 id="s12">12. Segurança da Informação</h2>
     <p>O Barrica adota medidas técnicas e administrativas de segurança desde a concepção do serviço (privacy and security by design), conforme Arts. 46 e 47 da LGPD. As medidas incluem:
@@ -188,20 +222,23 @@ Prazo de resposta: até 15 dias (Art. 19, II, LGPD), extensível a 30 dias para 
 Se identificarmos conta mantida por menor de 18 anos, procederemos à exclusão da conta e à minimização de retenção de dados, em conformidade com a LGPD.</p>
 
     <h2 id="s16">16. Alterações desta Política</h2>
-    <p>Podemos atualizar esta Política para refletir mudanças no Serviço, em nossos fornecedores ou em requisitos legais e regulatórios. Mudanças relevantes serão comunicadas por e-mail e/ou notificação no aplicativo.
+    <p>Podemos atualizar esta Política para refletir mudanças no Serviço, em nossos fornecedores ou em requisitos legais e regulatórios. A versão vigente está sempre publicada em legal.barrica.app e reproduzida dentro do aplicativo, com número de versão, data e histórico de alterações ao final, para que você possa comparar o que mudou.
+
+Registramos qual versão você aceitou no momento do cadastro. Hoje o aplicativo ainda não reapresenta a Política a quem já tem conta quando ela é atualizada, e estamos construindo esse mecanismo; enquanto ele não existir, a publicação da nova versão nos dois endereços é a forma pela qual a mudança é comunicada.
 
 Quando a alteração envolver nova finalidade incompatível com as originalmente informadas e que dependa de consentimento, solicitaremos novo consentimento específico antes de aplicar a mudança.</p>
 
     <h2 id="s17">17. Vigência, Versão e Contato</h2>
     <p>Esta Política entra em vigor na data de sua publicação e permanece vigente por prazo indeterminado.
 
-Versão: 1.3 — 17 de julho de 2026
+Versão: 2.0 · 20 de setembro de 2026
 
 Histórico de versões:
-• v1.0 (20 mar 2026) — Versão inicial
-• v1.1 (6 mai 2026) — Inclusão do PostHog como operador de analytics; remoção da Vercel (não utilizada); ajustes na seção de transferência internacional
-• v1.2 (17 jun 2026) — Correção da região de hospedagem do Supabase (West US/Oregon, EUA); a seção de transferência internacional passa a refletir que dados de conta, perfil e degustações são objeto de transferência internacional, com salvaguardas do Art. 33
-• v1.3 (17 jul 2026) — Inclusão do site institucional e da lista de espera (barricaapp.github.io) como superfície de analytics anônimo sem cookies (PostHog) e da associação da origem de campanha (UTM) ao e-mail informado na lista de espera
+• v1.0 (20 mar 2026): versão inicial
+• v1.1 (6 mai 2026): inclusão do PostHog como operador de analytics; remoção da Vercel (não utilizada); ajustes na seção de transferência internacional
+• v1.2 (17 jun 2026): correção da região de hospedagem do Supabase (West US/Oregon, EUA); a seção de transferência internacional passa a refletir que dados de conta, perfil e degustações são objeto de transferência internacional, com salvaguardas do Art. 33
+• v1.3 (17 jul 2026): inclusão do site institucional e da lista de espera como superfície de analytics anônimo sem cookies. Esta versão existiu apenas na cópia pública; a cópia do aplicativo permaneceu na v1.2, e a divergência foi corrigida na v2.0
+• v2.0 (20 set 2026): reescrita a partir de auditoria que comparou o texto com o banco de dados e o código. Passaram a constar: a leitura automática de rótulos e o envio das fotografias à Anthropic, nos Estados Unidos; a retenção real dessas fotografias e dos documentos de reivindicação após a exclusão de conta; o que a exclusão de conta de fato faz (desvinculação, não exclusão); a associação dos eventos de analytics ao identificador do usuário, corrigindo a descrição anterior de "identificador anônimo"; a leitura de localização por GPS a cada degustação, com arredondamento; a data de nascimento; a categoria de perfil; o Instagram; o login com Google e Apple e os campos recebidos dos provedores; a reivindicação de produtor, com CNPJ e documento comprobatório; e os demais conteúdos criados no aplicativo (receitas, sugestões de catálogo, estabelecimentos, denúncias e bloqueios). Foi removida a afirmação de que não havia outros terceiros recebendo dados pessoais
 
 Contato: <a href="mailto:barricaapp@gmail.com">barricaapp@gmail.com</a></p>
   </main>
